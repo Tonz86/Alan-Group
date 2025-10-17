@@ -1,181 +1,145 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
-    background-color: #f7fff9;
-    color: #333;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f4f8f5;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    background-color: #2e7d32;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 10;
+  background: #3b7a57;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+nav {
+  margin-top: 10px;
 }
 
-.logo img {
-    width: 40px;
-    height: 40px;
+nav button {
+  background: white;
+  color: #3b7a57;
+  border: none;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-nav ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-    padding-bottom: 5px;
-}
-
-nav a:hover, nav a.active {
-    border-bottom: 3px solid #a5d6a7;
+nav button:hover {
+  background: #2e6043;
+  color: white;
 }
 
 main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-.content-section {
-    display: none;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: all 0.4s ease-in-out;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+section {
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
-.content-section.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-h2 {
-    color: #2e7d32;
-    margin-bottom: 15px;
-}
-
-/* --- SLIDER --- */
+/* Slider */
 .slider {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-top: 15px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .slides {
-    position: relative;
-    width: 100%;
-    height: 350px;
+  display: flex;
+  transition: transform 1s ease-in-out;
 }
 
 .slides img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    border-radius: 10px;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
 }
 
-.slides img.active {
-    opacity: 1;
-    transform: translateX(0);
-    z-index: 2;
-}
-
-/* Tombol navigasi */
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(46,125,50,0.7);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.prev:hover, .next:hover {
-    background-color: #1b5e20;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Tombol Shopee */
+/* Online Store Buttons */
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 .btn {
-    display: inline-block;
-    background-color: #43a047;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: 0.3s;
+  background: #3b7a57;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #2e7d32;
+  background: #2e6043;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background: #3b7a57;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #2e6043;
 }
 
 footer {
-    background-color: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-    }
-    .slides {
-        height: 250px;
-    }
-    .logo h1 {
-        font-size: 18px;
-    }
+  background: #3b7a57;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }

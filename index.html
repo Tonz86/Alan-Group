@@ -1,98 +1,79 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Group</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alan Group - Pertanian Modern</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909763.png" alt="Logo Pertanian">
-            <h1>Pertanian Kita</h1>
+  <header>
+    <h1>🌾 Alan Group</h1>
+    <nav>
+      <button onclick="showSection('about')">Tentang Kami</button>
+      <button onclick="showSection('online')">Online Store</button>
+      <button onclick="showSection('lokasi')">Lokasi</button>
+      <button onclick="showSection('contact')">Kontak</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tentang Kami -->
+    <section id="about" class="active">
+      <h2>Tentang Kami</h2>
+      <div class="slider">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <div class="slides">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" alt="Pertanian 1">
+          <img src="https://images.unsplash.com/photo-1602526216236-1baf8e2e26c8?auto=format&fit=crop&w=1200&q=80" alt="Pertanian 2">
+          <img src="https://images.unsplash.com/photo-1603903641766-3a4e5e89f1b1?auto=format&fit=crop&w=1200&q=80" alt="Pertanian 3">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active" onclick="showSection('about', this)">Tentang Kami</a></li>
-                <li><a href="#" onclick="showSection('store', this)">Online Store</a></li>
-                <li><a href="#" onclick="showSection('location', this)">Lokasi</a></li>
-                <li><a href="#" onclick="showSection('contact', this)">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      <p>
+        Alan Group adalah perusahaan yang bergerak di bidang pertanian modern. 
+        Kami menyediakan hasil panen segar dan berkualitas tinggi dari lahan kami sendiri 
+        serta menjalin kemitraan dengan petani lokal.
+      </p>
+    </section>
 
-    <!-- Konten -->
-    <main>
-        <!-- Tentang Kami -->
-        <section id="about" class="content-section active">
-            <h2>Tentang Kami</h2>
-            <p>
-                <strong>Pertanian Kita</strong> adalah kelompok tani yang berfokus pada pertanian organik dan berkelanjutan. 
-                Kami bekerja sama dengan petani lokal untuk menghadirkan produk sehat, ramah lingkungan, 
-                dan bermanfaat bagi masyarakat.
-            </p>
-            <div class="slider">
-                <div class="slides">
-                    <img src="https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=1000&q=80" alt="Petani bekerja">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.l3Jp9wB4Tl1IWbOh8lHQSgHaEK?pid=Api&P=0&h=180" alt="Padi hijau">
-                    <img src="https://pertanian.uma.ac.id/wp-content/uploads/2023/06/pandasarjana.id-17-1024x672.png" alt="Tanaman organik">
-                </div>
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-        </section>
+    <!-- Online Store -->
+    <section id="online">
+      <h2>Online Store</h2>
+      <p>Kunjungi toko online kami di berbagai platform untuk mendapatkan produk segar dan berkualitas.</p>
+      <div class="store-links">
+        <a href="https://shopee.co.id" target="_blank" class="btn">🛍 Shopee</a>
+        <a href="https://tokopedia.com" target="_blank" class="btn">🛒 Tokopedia</a>
+        <a href="https://instagram.com" target="_blank" class="btn">📸 Instagram Shop</a>
+      </div>
+    </section>
 
-        <!-- Online Store -->
-        <section id="store" class="content-section">
-            <h2>Online Store</h2>
-            <p>
-                Belanja hasil tani segar kami di toko resmi kami di Shopee. 
-                Kami menyediakan berbagai produk pertanian mulai dari sayuran organik, beras, hingga pupuk alami.
-            </p>
-            <a href="https://shopee.co.id" target="_blank" class="btn">Kunjungi Shopee</a>
-        </section>
+    <!-- Lokasi -->
+    <section id="lokasi">
+      <h2>Lokasi Kami</h2>
+      <p>Toko cabang kami terletak di area yang strategis di kota Malang.</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.311539999065!2d112.630!3d-8.157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628274a2c4a33%3A0xa7e539a781d!2sMalang!5e0!3m2!1sen!2sid!4v1696356369389!5m2!1sen!2sid"
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </section>
 
-        <!-- Lokasi -->
-        <section id="location" class="content-section">
-            <h2>Lokasi Kami</h2>
-            <p>
-                Kunjungi toko offline kami untuk melihat langsung hasil pertanian kami dan berdiskusi dengan para petani.
-            </p>
-            <p><strong>Alamat 1:</strong> Jl. Pertanian No. 45, Desa Hijau, Kabupaten Subur</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.879859152364!2d110.40913457454615!3d-7.147547271309681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a782f42b2d91b%3A0xe9b6f6b7d33b0ea3!2sSawah!5e0!3m2!1sid!2sid!4v1674550213024!5m2!1sid!2sid"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <br>
-            <br>
-            </p>
-            <p><strong>Alamat 2:</strong> Jl. Pertanian No. 45, Desa Hijau, Kabupaten Subur</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.879859152364!2d110.40913457454615!3d-7.147547271309681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a782f42b2d91b%3A0xe9b6f6b7d33b0ea3!2sSawah!5e0!3m2!1sid!2sid!4v1674550213024!5m2!1sid!2sid"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+    <!-- Kontak -->
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <p>Hubungi kami untuk pertanyaan atau kerja sama.</p>
+      <form>
+        <input type="text" placeholder="Nama Anda" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Pesan Anda..." required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+  </main>
 
-        <!-- Kontak -->
-        <section id="contact" class="content-section">
-            <h2>Kontak Kami</h2>
-            <p>Hubungi kami untuk pemesanan, informasi, atau kerjasama lebih lanjut:</p>
-            <img src="https://images.unsplash.com/photo-1581091870634-7d89da21d161?auto=format&fit=crop&w=1000&q=80" alt="Tim Pertanian Kita">
-            <ul>
-                <li>Email: <a href="mailto:pertaniankita@gmail.com">pertaniankita@gmail.com</a></li>
-                <li>Telepon: +62 812 3456 7890</li>
-                <li>Instagram: <a href="https://instagram.com" target="_blank">@pertaniankita</a></li>
-            </ul>
-        </section>
-    </main>
+  <footer>
+    <p>© 2025 Alan Group - Pertanian Modern Indonesia</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Pertanian Kita | Semua Hak Dilindungi</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
