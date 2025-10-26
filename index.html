@@ -1,79 +1,438 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alan Group - Pertanian Modern</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Bumi Jaya - Perlengkapan Pertanian Lengkap</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🌾 Alan Group</h1>
-    <nav>
-      <button onclick="showSection('about')">Tentang Kami</button>
-      <button onclick="showSection('online')">Online Store</button>
-      <button onclick="showSection('lokasi')">Lokasi</button>
-      <button onclick="showSection('contact')">Kontak</button>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">🌾</span>
+                <span class="logo-text">Toko Bumi Jaya</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="showPage('home')" data-page="home" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span>Home</span>
+                </a></li>
+                <li><a onclick="showPage('about')" data-page="about" class="nav-item">
+                    <span class="nav-icon">ℹ️</span>
+                    <span>Tentang Kami</span>
+                </a></li>
+                <li><a onclick="showPage('store')" data-page="store" class="nav-item">
+                    <span class="nav-icon">🛍️</span>
+                    <span>Online Store</span>
+                </a></li>
+                <li><a onclick="showPage('location')" data-page="location" class="nav-item">
+                    <span class="nav-icon">📍</span>
+                    <span>Lokasi</span>
+                </a></li>
+                <li><a onclick="showPage('contact')" data-page="contact" class="nav-item">
+                    <span class="nav-icon">📞</span>
+                    <span>Kontak</span>
+                </a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <!-- Tentang Kami -->
-    <section id="about" class="active">
-      <h2>Tentang Kami</h2>
-      <div class="slider">
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <div class="slides">
-          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" alt="Pertanian 1">
-          <img src="https://images.unsplash.com/photo-1602526216236-1baf8e2e26c8?auto=format&fit=crop&w=1200&q=80" alt="Pertanian 2">
-          <img src="https://images.unsplash.com/photo-1603903641766-3a4e5e89f1b1?auto=format&fit=crop&w=1200&q=80" alt="Pertanian 3">
+    <div class="main-container">
+        <!-- Home Page -->
+        <div id="home" class="page-section active">
+            <div class="hero-home">
+                <div class="hero-content">
+                    <div class="hero-badge">🌟 Terpercaya Sejak 2010</div>
+                    <h1 class="hero-title">Solusi Lengkap Kebutuhan Pertanian Anda</h1>
+                    <p class="hero-subtitle">Menyediakan peralatan, pupuk, pestisida, dan benih berkualitas tinggi untuk hasil panen maksimal</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('store')">
+                            <span>🛒</span> Belanja Sekarang
+                        </button>
+                        <button class="btn btn-secondary" onclick="showPage('about')">
+                            <span>📖</span> Tentang Kami
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✅</div>
+                        <div class="feature-text">
+                            <h3>Kualitas Terjamin</h3>
+                            <p>Produk bersertifikat</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚚</div>
+                        <div class="feature-text">
+                            <h3>Pengiriman Cepat</h3>
+                            <p>Ke seluruh Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <div class="feature-text">
+                            <h3>Harga Terbaik</h3>
+                            <p>Harga bersaing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-      </div>
-      <p>
-        Alan Group adalah perusahaan yang bergerak di bidang pertanian modern. 
-        Kami menyediakan hasil panen segar dan berkualitas tinggi dari lahan kami sendiri 
-        serta menjalin kemitraan dengan petani lokal.
-      </p>
-    </section>
 
-    <!-- Online Store -->
-    <section id="online">
-      <h2>Online Store</h2>
-      <p>Kunjungi toko online kami di berbagai platform untuk mendapatkan produk segar dan berkualitas.</p>
-      <div class="store-links">
-        <a href="https://shopee.co.id" target="_blank" class="btn">🛍 Shopee</a>
-        <a href="https://tokopedia.com" target="_blank" class="btn">🛒 Tokopedia</a>
-        <a href="https://instagram.com" target="_blank" class="btn">📸 Instagram Shop</a>
-      </div>
-    </section>
+        <!-- Tentang Kami Page -->
+        <div id="about" class="page-section">
+            <div class="page-header">
+                <h1 class="page-title">Tentang Kami</h1>
+                <p class="page-subtitle">Mitra terpercaya untuk kesuksesan pertanian Anda</p>
+            </div>
 
-    <!-- Lokasi -->
-    <section id="lokasi">
-      <h2>Lokasi Kami</h2>
-      <p>Toko cabang kami terletak di area yang strategis di kota Malang.</p>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.311539999065!2d112.630!3d-8.157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628274a2c4a33%3A0xa7e539a781d!2sMalang!5e0!3m2!1sen!2sid!4v1696356369389!5m2!1sen!2sid"
-        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
-    </section>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-card">
+                        <h2>Sejarah Kami</h2>
+                        <p>Toko Bumi Jaya adalah toko perlengkapan pertanian terpercaya yang telah melayani para petani Indonesia sejak tahun 2010. Kami berkomitmen untuk menyediakan produk-produk berkualitas tinggi dengan harga yang terjangkau.</p>
+                    </div>
+                    <div class="text-card">
+                        <h2>Pengalaman & Keahlian</h2>
+                        <p>Dengan pengalaman lebih dari 13 tahun, kami memahami kebutuhan petani modern dan selalu menghadirkan solusi terbaik untuk meningkatkan produktivitas pertanian Anda.</p>
+                    </div>
+                    <div class="text-card">
+                        <h2>Tim Profesional</h2>
+                        <p>Tim kami terdiri dari para ahli pertanian yang siap memberikan konsultasi dan saran untuk kesuksesan usaha pertanian Anda. Kami selalu mengutamakan kepuasan pelanggan dan kualitas produk.</p>
+                    </div>
+                    <div class="text-card">
+                        <h2>Visi & Misi</h2>
+                        <p>Visi kami adalah menjadi mitra terpercaya bagi seluruh petani Indonesia dalam mencapai hasil panen yang optimal dan berkelanjutan.</p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image">
+                        <span class="about-icon">🚜</span>
+                        <div class="about-overlay">
+                            <h3>13+ Tahun</h3>
+                            <p>Pengalaman Melayani</p>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>10,000+</h3>
+                            <p>Pelanggan Puas</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>500+</h3>
+                            <p>Produk Tersedia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Kontak -->
-    <section id="contact">
-      <h2>Kontak Kami</h2>
-      <p>Hubungi kami untuk pertanyaan atau kerja sama.</p>
-       <p>📞 Telepon: <strong>0812-3456-7890</strong></p>
-      <p>✉️ Email: <strong>alangroup@gmail.com</strong></p>
-      <p>📱 Media Sosial: 
-        <a href="#">Instagram</a> | 
-        <a href="#">Facebook</a>
-      </p>
-    </section>
-  </main>
+            <div class="values-section">
+                <h2 class="section-title">Nilai-Nilai Kami</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">✅</div>
+                        <h3>Kualitas Terjamin</h3>
+                        <p>Semua produk kami telah teruji dan bersertifikat resmi untuk memastikan kualitas terbaik</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💰</div>
+                        <h3>Harga Bersaing</h3>
+                        <p>Harga terbaik untuk produk berkualitas tinggi tanpa mengorbankan mutu</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚚</div>
+                        <h3>Pengiriman Cepat</h3>
+                        <p>Pengiriman ke seluruh Indonesia dengan aman dan tepat waktu</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">👨‍🌾</div>
+                        <h3>Konsultasi Gratis</h3>
+                        <p>Tim ahli siap membantu kebutuhan pertanian Anda kapan saja</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <footer>
-    <p>© 2025 Alan Group - Pertanian Modern Indonesia</p>
-  </footer>
+        <!-- Online Store Page -->
+        <div id="store" class="page-section">
+            <div class="page-header">
+                <h1 class="page-title">Belanja Online</h1>
+                <p class="page-subtitle">Kunjungi toko online kami di berbagai platform marketplace favorit</p>
+            </div>
+            
+            <div class="store-links">
+                <a href="https://shopee.co.id" target="_blank" class="store-card shopee-card">
+                    <div class="store-logo shopee-bg">
+                        <span class="store-emoji">🛍️</span>
+                    </div>
+                    <div class="store-info">
+                        <h2>Shopee</h2>
+                        <p>Belanja mudah dengan berbagai promo menarik dan gratis ongkir</p>
+                        <div class="store-benefits">
+                            <span class="benefit-tag">✓ Cashback</span>
+                            <span class="benefit-tag">✓ Gratis Ongkir</span>
+                        </div>
+                        <span class="store-btn">
+                            <span>Kunjungi Toko</span>
+                            <span class="arrow">→</span>
+                        </span>
+                    </div>
+                </a>
 
-  <script src="script.js"></script>
+                <a href="https://tokopedia.com" target="_blank" class="store-card tokopedia-card">
+                    <div class="store-logo tokopedia-bg">
+                        <span class="store-emoji">🏪</span>
+                    </div>
+                    <div class="store-info">
+                        <h2>Tokopedia</h2>
+                        <p>Produk lengkap dengan gratis ongkir dan cicilan 0%</p>
+                        <div class="store-benefits">
+                            <span class="benefit-tag">✓ Cicilan 0%</span>
+                            <span class="benefit-tag">✓ Gratis Ongkir</span>
+                        </div>
+                        <span class="store-btn">
+                            <span>Kunjungi Toko</span>
+                            <span class="arrow">→</span>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="https://bukalapak.com" target="_blank" class="store-card bukalapak-card">
+                    <div class="store-logo bukalapak-bg">
+                        <span class="store-emoji">🛒</span>
+                    </div>
+                    <div class="store-info">
+                        <h2>Bukalapak</h2>
+                        <p>Belanja aman dan terpercaya dengan proteksi pembeli</p>
+                        <div class="store-benefits">
+                            <span class="benefit-tag">✓ Aman</span>
+                            <span class="benefit-tag">✓ Terpercaya</span>
+                        </div>
+                        <span class="store-btn">
+                            <span>Kunjungi Toko</span>
+                            <span class="arrow">→</span>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/6281234567890" target="_blank" class="store-card whatsapp-card">
+                    <div class="store-logo whatsapp-bg">
+                        <span class="store-emoji">💬</span>
+                    </div>
+                    <div class="store-info">
+                        <h2>WhatsApp</h2>
+                        <p>Pesan langsung via WhatsApp untuk respons cepat 24/7</p>
+                        <div class="store-benefits">
+                            <span class="benefit-tag">✓ Fast Response</span>
+                            <span class="benefit-tag">✓ 24/7</span>
+                        </div>
+                        <span class="store-btn">
+                            <span>Chat Sekarang</span>
+                            <span class="arrow">→</span> 
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="promo-banner">
+                <div class="promo-icon">🎁</div>
+                <div class="promo-content">
+                    <h3>Dapatkan Promo Spesial!</h3>
+                    <p>Follow akun marketplace kami dan aktifkan notifikasi untuk mendapatkan info promo terbaru, diskon hingga 50%, dan voucher gratis ongkir!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lokasi Page -->
+        <div id="location" class="page-section">
+            <div class="page-header">
+                <h1 class="page-title">Lokasi Toko</h1>
+                <p class="page-subtitle">Kunjungi toko kami di berbagai cabang yang tersedia</p>
+            </div>
+
+            <div class="location-content">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <span class="map-icon">🗺️</span>
+                        <p>Peta Lokasi Toko</p>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <h2 class="details-title">Alamat Lengkap</h2>
+                    <div class="location-item">
+                        <div class="location-header">
+                            <span class="location-badge main">Pusat</span>
+                            <h3>Toko Pusat Cianjur</h3>
+                        </div>
+                        <p class="location-address">
+                            📍 Jl. Raya Pertanian No. 123<br>
+                            Kecamatan Cianjur, Jawa Barat 43211
+                        </p>
+                        <p class="location-phone">📞 (0263) 123-4567</p>
+                    </div>
+
+                    <div class="location-item">
+                        <div class="location-header">
+                            <span class="location-badge">Cabang</span>
+                            <h3>Cabang Bandung</h3>
+                        </div>
+                        <p class="location-address">
+                            📍 Jl. Tani Makmur No. 45<br>
+                            Bandung, Jawa Barat 40123
+                        </p>
+                        <p class="location-phone">📞 (022) 234-5678</p>
+                    </div>
+
+                    <div class="location-item">
+                        <div class="location-header">
+                            <span class="location-badge">Cabang</span>
+                            <h3>Cabang Bogor</h3>
+                        </div>
+                        <p class="location-address">
+                            📍 Jl. Subur Jaya No. 78<br>
+                            Bogor, Jawa Barat 16111
+                        </p>
+                        <p class="location-phone">📞 (0251) 345-6789</p>
+                    </div>
+
+                    <div class="hours-card">
+                        <div class="hours-icon">⏰</div>
+                        <div class="hours-content">
+                            <h3>Jam Operasional</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span class="day">Senin - Sabtu</span>
+                                    <span class="time">07.00 - 18.00 WIB</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Minggu</span>
+                                    <span class="time">08.00 - 14.00 WIB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kontak Page -->
+        <div id="contact" class="page-section">
+            <div class="page-header">
+                <h1 class="page-title">Hubungi Kami</h1>
+                <p class="page-subtitle">Kami siap membantu Anda. Hubungi kami melalui berbagai channel yang tersedia</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="info-title">Informasi Kontak</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon phone-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Telepon</h3>
+                            <p>(0263) 123-4567</p>
+                            <p>0812-3456-7890</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon email-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@tokotanimakmur.com</p>
+                            <p>customer@tokotanimakmur.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon whatsapp-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>0812-3456-7890</p>
+                            <span class="badge-online">Fast Response 24/7</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon social-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>Media Sosial</h3>
+                            <p>Instagram: @tokotanimakmur</p>
+                            <p>Facebook: Toko Tani Makmur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2 class="form-title">Kirim Pesan</h2>
+                    <form onsubmit="submitForm(event)" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <span class="label-icon">👤</span>
+                                Nama Lengkap
+                            </label>
+                            <input type="text" id="name" required placeholder="Masukkan nama lengkap Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <span class="label-icon">📧</span>
+                                Email
+                            </label>
+                            <input type="email" id="email" required placeholder="nama@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                <span class="label-icon">📱</span>
+                                Nomor Telepon
+                            </label>
+                            <input type="tel" id="phone" required placeholder="08xx-xxxx-xxxx">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <span class="label-icon">💬</span>
+                                Pesan
+                            </label>
+                            <textarea id="message" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-icon">📤</span>
+                            <span>Kirim Pesan</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="footer-icon">🌾</span>
+                <h3>Toko Tani Makmur</h3>
+            </div>
+            <p class="footer-tagline">Solusi Terpercaya untuk Pertanian Indonesia</p>
+            <div class="footer-social">
+                <a href="#" class="social-link">📱</a>
+                <a href="#" class="social-link">📧</a>
+                <a href="#" class="social-link">💬</a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Toko Tani Makmur. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
