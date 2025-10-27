@@ -16,23 +16,23 @@
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a onclick="showPage('home')" data-page="home" class="nav-item">
+        <li><a href="#home" class="nav-item">
           <span class="nav-icon">🏠</span>
           <span>Home</span>
         </a></li>
-        <li><a onclick="showPage('about')" data-page="about" class="nav-item">
+        <li><a href="#about" class="nav-item">
           <span class="nav-icon">ℹ️</span>
           <span>Tentang Kami</span>
         </a></li>
-        <li><a onclick="showPage('store')" data-page="store" class="nav-item">
+        <li><a href="#store" class="nav-item">
           <span class="nav-icon">🛍️</span>
           <span>Online Store</span>
         </a></li>
-        <li><a onclick="showPage('location')" data-page="location" class="nav-item">
+        <li><a href="#location" class="nav-item">
           <span class="nav-icon">📍</span>
           <span>Lokasi</span>
         </a></li>
-        <li><a onclick="showPage('contact')" data-page="contact" class="nav-item">
+        <li><a href="#contact" class="nav-item">
           <span class="nav-icon">📞</span>
           <span>Kontak</span>
         </a></li>
@@ -48,8 +48,8 @@
 
   <div class="main-container">
 
-    <!-- Home Page -->
-    <div id="home" class="page-section active">
+    <!-- Home Section -->
+    <section id="home" class="page-section">
       <div class="hero-home">
         <div class="hero-content">
           <div class="hero-badge">🌟 Terpercaya Sejak 2020</div>
@@ -58,12 +58,12 @@
             Menyediakan peralatan, pupuk, pestisida, dan benih berkualitas tinggi untuk hasil panen maksimal
           </p>
           <div class="hero-buttons">
-            <button class="btn btn-primary" onclick="showPage('store')">
+            <a href="#store" class="btn btn-primary">
               <span>🛒</span> Belanja Sekarang
-            </button>
-            <button class="btn btn-secondary" onclick="showPage('about')">
+            </a>
+            <a href="#about" class="btn btn-secondary">
               <span>📖</span> Tentang Kami
-            </button>
+            </a>
           </div>
         </div>
 
@@ -105,10 +105,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Tentang Kami Page -->
-    <div id="about" class="page-section">
+    <!-- Tentang Kami Section -->
+    <section id="about" class="page-section">
       <div class="page-header">
         <h1 class="page-title">Tentang Kami</h1>
         <p class="page-subtitle">Mitra terpercaya untuk kesuksesan pertanian Anda</p>
@@ -133,14 +133,12 @@
           </div>
         </div>
 
-        <section class="experience-section">
+        <div class="experience-section">
           <div class="experience-card">
             <h2>5 Tahun</h2>
             <p>Pengalaman Melayani</p>
           </div>
-        </section>
-
-        <!-- Statistik di tengah -->
+        </div>
       </div>
 
       <div class="values-section">
@@ -168,20 +166,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Online Store Page -->
-    <div id="store" class="page-section">
+    <!-- Online Store Section -->
+    <section id="store" class="page-section">
       <div class="page-header">
         <h1 class="page-title">Belanja Online</h1>
-        <p class="page-subtitle">Kunjungi toko online kami di berbagai platform marketplace favorit</p>
+        <p class="page-subtitle">Kunjungi toko online kami dan silahkan hubungi nomor yang tertera.</p>
       </div>
 
       <div class="store-links">
         <a href="https://id.shp.ee/wXRgCvz" target="_blank" class="store-card shopee-card">
           <div class="store-logo shopee-bg">
             <img src="https://static.vecteezy.com/system/resources/previews/024/555/081/original/shopee-logo-transparent-free-png.png" alt="Shopee Logo" width="80">
-
           </div>
           <div class="store-info">
             <h2>Shopee</h2>
@@ -199,7 +196,7 @@
 
         <a href="https://wa.me/6285875613333" target="_blank" class="store-card whatsapp-card">
           <div class="store-logo whatsapp-bg">
-            <img src="https://static.vecteezy.com/system/resources/previews/014/414/681/original/whatsapp-square-logo-on-transparent-background-free-vector.jpg" alt="Shopee Logo" width="60">
+            <img src="https://static.vecteezy.com/system/resources/previews/014/414/681/original/whatsapp-square-logo-on-transparent-background-free-vector.jpg" alt="WhatsApp Logo" width="60">
           </div>
           <div class="store-info">
             <h2>WhatsApp</h2>
@@ -215,10 +212,10 @@
           </div>
         </a>
       </div>
-    </div>
+    </section>
 
-    <!-- Lokasi Page -->
-    <div id="location" class="page-section">
+    <!-- Lokasi Section -->
+    <section id="location" class="page-section">
       <div class="page-header">
         <h1 class="page-title">Lokasi Toko</h1>
         <p class="page-subtitle">Kunjungi toko kami di berbagai cabang yang tersedia</p>
@@ -238,7 +235,7 @@
           <div class="location-item">
             <div class="location-header">
               <span class="location-badge main">Pusat</span>
-              <a href="https://share.google/6fTyGCev1gjqnCGoN"><h3>Toko Bumi Jaya</h3></a>
+              <a href="https://share.google/6fTyGCev1gjqnCGoN" target="_blank"><h3>Toko Bumi Jaya</h3></a>
             </div>
             <p class="location-address">
               📍 JI. Urip Sumoharjo No.74<br>
@@ -265,7 +262,7 @@
                 </div>
                 <div class="hours-item">
                   <span class="day">Minggu</span>
-                  <span class="time">Tutup</span>
+                  <span class="time">: Tutup</span>
                 </div>
               </div>
             </div>
@@ -273,10 +270,10 @@
 
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Kontak Page -->
-    <div id="contact" class="page-section">
+    <!-- Kontak Section -->
+    <section id="contact" class="page-section">
       <div class="page-header">
         <h1 class="page-title">Hubungi Kami</h1>
         <p class="page-subtitle">Kami siap membantu Anda. Hubungi kami melalui berbagai channel yang tersedia</p>
@@ -319,7 +316,9 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- Footer -->
@@ -329,11 +328,6 @@
         <img src="Logo.png" alt="Alan Group Logo" class="logo-img">
       </div>
       <p class="footer-tagline">Solusi Terpercaya untuk Pertanian Indonesia</p>
-      <div class="footer-social">
-        <a href="#" class="social-link">📱</a>
-        <a href="#" class="social-link">📧</a>
-        <a href="#" class="social-link">💬</a>
-      </div>
       <p>© Alan Group. Semua Hak Dilindungi.</p>
     </div>
   </footer>
