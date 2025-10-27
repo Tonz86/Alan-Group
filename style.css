@@ -53,22 +53,24 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+.logo-img {
+  width: 100px;   
+  height: 100px;  
+  object-fit: contain;
 }
 
-.logo-icon {
-    font-size: 2rem;
-    animation: rotate 3s infinite linear;
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
 }
+
+
 
 @keyframes rotate {
     0%, 100% { transform: rotate(0deg); }
@@ -315,6 +317,7 @@ nav {
     font-size: 0.95rem;
 }
 
+
 /* ========================================
    About Section
 ======================================== */
@@ -335,7 +338,7 @@ nav {
 
 .text-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
     border-left: 4px solid var(--secondary-green);
@@ -347,42 +350,29 @@ nav {
     box-shadow: var(--shadow-lg);
 }
 
-.text-card h2 {
-    color: var(--primary-green);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
 .text-card p {
     color: var(--text-light);
     line-height: 1.8;
 }
 
-.about-visual {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.experience-section {
+  background: url('Sombong.jpg') no-repeat center center/cover;
+  /* Atur posisi dan ukuran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px; /* sesuaikan tinggi */
+  border-radius: 20px;
 }
 
-.about-image {
-    background: linear-gradient(135deg, var(--secondary-green) 0%, var(--light-green) 100%);
-    height: 400px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    overflow: hidden;
+.experience-card {
+  background-color: #fcfcfc;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
-.about-icon {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
-}
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -741,6 +731,14 @@ nav {
     transition: all 0.3s;
 }
 
+.location-item h3 {
+  font-size: 1.3em; /* ubah nilai sesuai selera, misalnya 1.4em */
+  font-weight: 600;
+  color: #4a148c; /* opsional: warna ungu lembut */
+  margin: 0;
+}
+
+
 .location-item:hover {
     transform: translateX(10px);
     box-shadow: var(--shadow-lg);
@@ -827,20 +825,13 @@ nav {
    Contact Section
 ======================================== */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding: 3rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.contact-info,
-.contact-form {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+  background: #fff;
+  border-radius: 25px;
+  padding: 50px;
+  width: 80%;          /* perlebar, bisa 90% kalau mau hampir full */
+  max-width: 900px;    /* batas maksimal supaya tetap rapi di layar besar */
+  margin: 40px auto;   /* tetap di tengah */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .info-title,
